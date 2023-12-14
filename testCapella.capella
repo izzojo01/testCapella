@@ -43,7 +43,18 @@
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="6552af29-7495-4499-9962-d9a8ea02dd83" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-            id="233a8be1-29ba-4fd7-ba91-97f7950bfe2b" name="Root Operational Activity"/>
+            id="233a8be1-29ba-4fd7-ba91-97f7950bfe2b" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="d504afa5-22f1-4368-8859-a9c9246ac8cc" name="Hold"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="995f2f10-ca9e-4c90-ab0f-88a233543cca" name="Move"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="fcc80e7d-6dc2-4e1f-b377-f1de9e35c380" name="Touch"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="66aa8773-2a88-4166-9284-ffdc1f7d3de1" name="Touch"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="988b9f3d-dd2f-41c7-9abd-997299b596cf" name="Touch"/>
+        </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="62bd6515-9efa-40ce-9d0d-6418e5a6585c" name="Operational Capabilities">
@@ -88,11 +99,29 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="5bb39918-b1b1-416a-92b8-d9e5ca1efba7"
             name="Paper" abstractType="#9f4cc08c-94a1-4d5e-aea3-107f387160d0"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="da1c4952-6bd4-4eca-8786-08f600ef918f"
-            name="User" actor="true" human="true"/>
+            name="User" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="0545b750-725f-4ed1-a641-4712d3aebde8" targetElement="#d504afa5-22f1-4368-8859-a9c9246ac8cc"
+              sourceElement="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="5262bf1f-b6c2-40ba-97ca-b526327f31f4" targetElement="#995f2f10-ca9e-4c90-ab0f-88a233543cca"
+              sourceElement="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="34dc2770-d9ec-464c-904d-bf6572432739" targetElement="#fcc80e7d-6dc2-4e1f-b377-f1de9e35c380"
+              sourceElement="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ffc1ef0f-6baf-4aa2-a519-7304eea32f92"
-            name="Device"/>
+            name="Device">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="2e6e0710-e7e4-4c86-962c-4f939db7ea8c" targetElement="#66aa8773-2a88-4166-9284-ffdc1f7d3de1"
+              sourceElement="#ffc1ef0f-6baf-4aa2-a519-7304eea32f92"/>
+        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="9f4cc08c-94a1-4d5e-aea3-107f387160d0"
-            name="Paper"/>
+            name="Paper">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="4be033ce-d4a0-43fd-8a44-209d9ee0d16d" targetElement="#988b9f3d-dd2f-41c7-9abd-997299b596cf"
+              sourceElement="#9f4cc08c-94a1-4d5e-aea3-107f387160d0"/>
+        </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
