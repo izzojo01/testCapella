@@ -46,7 +46,33 @@
             id="233a8be1-29ba-4fd7-ba91-97f7950bfe2b" name="Root Operational Activity"/>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
-          id="62bd6515-9efa-40ce-9d0d-6418e5a6585c" name="Operational Capabilities"/>
+          id="62bd6515-9efa-40ce-9d0d-6418e5a6585c" name="Operational Capabilities">
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="2b2b1259-21b8-4d68-a5c8-ce7283f8abf7" name="Write">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="880f8563-4f8b-44d6-9841-f83d01cdb614" involved="#9f4cc08c-94a1-4d5e-aea3-107f387160d0"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="7ab1098d-d6b2-486d-8c30-77fdfddb2fa8" involved="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="e604802b-8605-4676-a76f-d35eecc260e3" involved="#ffc1ef0f-6baf-4aa2-a519-7304eea32f92"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="c4d1d6e4-a671-4131-b3c0-55bfde7ee3e7" name="Erase">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="51eac4d3-0f86-42dd-807f-ef3454780b6d" involved="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="a287fdea-d6de-4bb3-b8d7-6d4e8a82b58a" involved="#ffc1ef0f-6baf-4aa2-a519-7304eea32f92"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="1a01e118-1e08-430b-b322-056e63f7c680" involved="#9f4cc08c-94a1-4d5e-aea3-107f387160d0"/>
+        </ownedOperationalCapabilities>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="c5de5c99-038e-44b5-b26b-e2943cd6b715" name="Sharpen">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="a5d1fcec-7b5f-4e9d-9386-e0dc60f16f9e" involved="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="e5a57b1e-6417-4c30-811c-c93a8d340159" involved="#ffc1ef0f-6baf-4aa2-a519-7304eea32f92"/>
+        </ownedOperationalCapabilities>
+      </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="9379be42-1d2f-4163-ab5b-24691b1c3fac" name="Interfaces"/>
       <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
@@ -54,7 +80,20 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="be71a9d1-5eca-4c4a-85f5-51996dfc672d"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="5cd4f81d-eaca-4afb-bb8b-3ba8ee6679a5"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="814e2a96-a1c1-4833-a5f9-9c5aff867b84"
+            name="User" abstractType="#da1c4952-6bd4-4eca-8786-08f600ef918f"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="e547d3b6-a773-4887-bdb8-49917413d3ec"
+            name="Device" abstractType="#ffc1ef0f-6baf-4aa2-a519-7304eea32f92"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="5bb39918-b1b1-416a-92b8-d9e5ca1efba7"
+            name="Paper" abstractType="#9f4cc08c-94a1-4d5e-aea3-107f387160d0"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="da1c4952-6bd4-4eca-8786-08f600ef918f"
+            name="User" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="ffc1ef0f-6baf-4aa2-a519-7304eea32f92"
+            name="Device"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="9f4cc08c-94a1-4d5e-aea3-107f387160d0"
+            name="Paper"/>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="dbb91f1d-c9c7-45ab-a7ff-52c65d757138" name="System Analysis">
